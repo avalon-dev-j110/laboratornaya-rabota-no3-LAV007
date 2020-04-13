@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         int[] array = new int [20];
         /**
-         * Проинициализировать массив значениями
+         * Проинициализировать массив значениями                
 	 * последовательности чисел Фибоначчи.
          */
         FibonacciInitializer f = new FibonacciInitializer();
