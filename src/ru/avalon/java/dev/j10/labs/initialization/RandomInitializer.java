@@ -14,10 +14,12 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  * инициализации.
  */
 public class RandomInitializer implements Initializer {
-    private int number;
+    public static int maxValue;
+    public static int minValue;
     
-    public RandomInitializer(int number) {
-        this.number = number;
+    public RandomInitializer(int min, int max) {
+        minValue = min;
+        maxValue = max;
     }
     
     /**
@@ -29,8 +31,7 @@ public class RandomInitializer implements Initializer {
     public void initialize(int[] array) {
         
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) Math.round((Math.random() * number) - (number));
-            System.out.print (array[i] + " ");
+            array[i] = (int) Math.round((Math.random() *  (-minValue + maxValue + 1) + minValue ));            
         
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
