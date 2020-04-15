@@ -26,15 +26,18 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
-        System.out.println("The amount of Fibonacci's numbers is " + sum + "\n");
+        System.out.println("The amount of Fibonacci's numbers is " + sum);
                 
         /**
          * Проинициализировать массив последовательностью
 	 * случайных чисел в диапазоне от -50 до 50.
-         */
-        RandomInitializer random = new RandomInitializer(50);
-        System.out.println("Initialization with random numbers from -50 to 50:");
-        random.initialize(array);
+         */ 
+        RandomInitializer random = new RandomInitializer(-50, 50);
+        System.out.println("\n-------------------------------------------------------------------- \n" +
+                           "Initialization with random numbers from " + RandomInitializer.minValue +
+                           " to " + RandomInitializer.maxValue + " :");
+        random.initialize(array);        
+        for(int print: array) System.out.print(print + " ");
         System.out.println();
         
         /**
@@ -52,15 +55,18 @@ public class Main {
          * Проинициализировать массив последовательностью
 	 * случайных чисел в диапазоне от -50 до 50.
          */
-        RandomInitializer random2 = new RandomInitializer(50);
-        System.out.println("\n" + "\n" + "Initialization with random numbers from -50 to 50:");
-        random2.initialize(array);
+        System.out.println("\n-------------------------------------------------------------------- \n" +
+                           "Initialization with random numbers from " + RandomInitializer.minValue +
+                           " to " + RandomInitializer.maxValue + " :");
+        random.initialize(array);
+        for(int print: array) System.out.print(print + " ");
+        System.out.println();
         
         /**
          * Отсортировать массив с использованием
 	 * сортировки выбора.
          */
-        System.out.println("\n" + "Sort of array by SELECTION sort: ");
+        System.out.println("Sort of array by SELECTION sort: ");
         SelectionSort selectionSort = new SelectionSort();
         selectionSort.sort(array);
         for(int i=0;i<array.length;i++){
@@ -71,15 +77,18 @@ public class Main {
          * Проинициализировать массив последовательностью
 	 * случайных чисел в диапазоне от -50 до 50.
          */
-        RandomInitializer random3 = new RandomInitializer(50);
-        System.out.println("\n" + "\n" + "Initialization with random numbers from -50 to 50:");
-        random3.initialize(array);
+        System.out.println("\n-------------------------------------------------------------------- \n" +
+                           "Initialization with random numbers from " + RandomInitializer.minValue +
+                           " to " + RandomInitializer.maxValue + " :");
+        random.initialize(array);
+        for(int print: array) System.out.print(print + " ");
+        System.out.println();
         
         /**
          * Отсортировать массив с использованием
 	 * сортировки Шела.
          */
-        System.out.println("\n" + "Sort of array by SHELL sort: ");
+        System.out.println("Sort of array by SHELL sort: ");
         ShellSort shellSort = new ShellSort();
         shellSort.sort(array);
         for(int i=0;i<array.length;i++){
